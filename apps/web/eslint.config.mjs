@@ -12,9 +12,6 @@ const compat = new FlatCompat({
 const config = [...compat.extends("next/core-web-vitals", "next/typescript")];
 
 export default config;
-import js from "@eslint/js";
-import tseslint from "typescript-eslint";
-
 export default tseslint.config(
   {
     ignores: [".next/**"],

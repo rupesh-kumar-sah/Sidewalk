@@ -1,7 +1,7 @@
 {
   "name": "sidewalk",
   "version": "1.0.0",
-  "description": "**Sidewalk** is an open-source, civic reporting and accountability platform that empowers citizens to document local issues, track government response, and ensure follow-through—publicly and transparently.",
+  "description": "**Sidewalk** is an open-source, civic reporting and accountability platform that empowers citizens to document local issues, track government response, and ensure follow-through\u2014publicly and transparently.",
   "private": true,
   "packageManager": "pnpm@9.0.0",
   "main": "index.js",
@@ -10,10 +10,10 @@
   },
   "scripts": {
     "bootstrap": "pnpm install",
-    "dev:api": "pnpm --filter sidewalk-api dev",
-    "dev:web": "pnpm --filter sidewalk-web dev",
-    "dev:mobile": "pnpm --filter mobile start",
-    "build": "pnpm -r --if-present build",
+    "dev:api": "node init && pnpm --filter sidewalk-api dev",
+    "dev:web": "node init && pnpm --filter sidewalk-web dev",
+    "dev:mobile": "node init && pnpm --filter mobile start",
+    "build": "node init && pnpm -r --if-present build",
     "lint": "pnpm -r --if-present lint",
     "typecheck": "pnpm -r --if-present typecheck",
     "check": "pnpm lint && pnpm typecheck && pnpm build"
