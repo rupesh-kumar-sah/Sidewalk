@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "dev": "tsx watch src/server.ts",
+    "build": "node init && tsc",
+    "start": "node init && node dist/server.js",
+    "dev": "node init && tsx watch src/server.ts",
     "worker:media": "tsx src/scripts/media-worker.ts",
     "worker:stellar-anchor": "tsx src/scripts/stellar-anchor-worker.ts",
     "lint": "eslint .",
