@@ -8,22 +8,31 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "dev:api": "pnpm --filter @sidewalk/api dev",
-    "dev:web": "pnpm --filter @sidewalk/web dev",
-    "dev:mobile": "pnpm --filter @sidewalk/mobile dev",
-    "dev:stellar": "pnpm --filter @sidewalk/stellar-service dev",
-    "build": "turbo run build",
+    "dev:api": "node init && pnpm --filter @sidewalk/api dev",
+    "dev:web": "node init && pnpm --filter @sidewalk/web dev",
+    "dev:mobile": "node init && pnpm --filter @sidewalk/mobile dev",
+    "build": "node init && turbo run build",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
-    "check": "pnpm lint && pnpm typecheck && pnpm build"
+    "test": "turbo run test",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
   },
   "devDependencies": {
     "@eslint/js": "^9.27.0",
     "@types/node": "^22.15.30",
     "eslint": "^9.27.0",
     "globals": "^15.15.0",
+    "prettier": "^3.4.2",
     "turbo": "^2.5.3",
-    "typescript": "^6.0.3",
+    "typescript": "^5.6.3",
     "typescript-eslint": "^8.32.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "esbuild",
+      "prisma"
+    ]
   }
 }
