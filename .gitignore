@@ -9,10 +9,13 @@ coverage/
 *.tsbuildinfo
 .turbo/
 
+# database
+*.db
+*.db-journal
+
 # environment files
-.env
-.env.*
 !.env.example
+!.env.test
 
 # mobile and local tooling
 .expo/
@@ -28,3 +31,4 @@ scripts/local/
 # temporary files
 tmp/
 temp/
+config.bat
