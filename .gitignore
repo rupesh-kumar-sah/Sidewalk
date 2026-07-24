@@ -14,8 +14,6 @@ coverage/
 *.db-journal
 
 # environment files
-.env
-.env.*
 !.env.example
 !.env.test
 
@@ -33,3 +31,4 @@ scripts/local/
 # temporary files
 tmp/
 temp/
+config.bat

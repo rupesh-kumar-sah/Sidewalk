@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "dotenv -e .env.test -- prisma generate && tsc -p tsconfig.json",
-    "start": "node dist/server.js",
+    "dev": "node init && tsx watch src/server.ts",
+    "build": "node init && dotenv -e .env.test -- prisma generate && tsc -p tsconfig.json",
+    "start": "node init && node dist/server.js",
     "lint": "eslint src --ext .ts",
     "typecheck": "dotenv -e .env.test -- prisma generate && tsc -p tsconfig.json --noEmit",
     "pretest": "dotenv -e .env.test -- prisma generate && dotenv -e .env.test -- prisma db push --force-reset --skip-generate",
